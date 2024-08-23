@@ -1,4 +1,4 @@
-package pkg
+package board
 
 type SudokuBoard struct {
 	board [9][9]int

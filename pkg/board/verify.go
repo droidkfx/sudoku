@@ -1,4 +1,4 @@
-package pkg
+package board
 
 /*
 VerifyBoard checks if a SudokuBoard is valid. It checks if the board is valid by checking if each column, row, and

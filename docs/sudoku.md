@@ -34,3 +34,7 @@ mindmap
         id(Any mode)
     Game
 ```
+
+## Future Reading
+
+* https://pi.math.cornell.edu/~mec/Summer2009/Mahmood/Count.html

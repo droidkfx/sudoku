@@ -1,5 +1,7 @@
 package board
 
+import "fmt"
+
 type SudokuBoard struct {
 	board [9][9]int
 }
@@ -20,4 +22,15 @@ func (s *SudokuBoard) GetAt(x, y int) int {
 
 func (s *SudokuBoard) SetAt(x, y, value int) {
 	s.board[y][x] = value
+}
+
+func (s *SudokuBoard) String() string {
+	result := ""
+	for _, list := range s.board {
+		for _, num := range list {
+			result += fmt.Sprintf("%d ", num)
+		}
+		result += "\n"
+	}
+	return result
 }

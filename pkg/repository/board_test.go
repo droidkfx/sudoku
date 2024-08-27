@@ -198,7 +198,7 @@ func Test_sudokuBoardFileRepo_GetBoardNumber(t *testing.T) {
 				},
 			},
 			want: want{
-				sudokuBoard: board.BoardFromNumbers([9][9]int{}),
+				sudokuBoard: board.FromNumbers([9][9]int{}),
 			},
 		},
 		{
@@ -208,7 +208,7 @@ func Test_sudokuBoardFileRepo_GetBoardNumber(t *testing.T) {
 				initialFileContent: []byte{},
 			},
 			want: want{
-				sudokuBoard: board.BoardFromNumbers([9][9]int{}),
+				sudokuBoard: board.FromNumbers([9][9]int{}),
 			},
 		},
 		{
@@ -228,7 +228,7 @@ func Test_sudokuBoardFileRepo_GetBoardNumber(t *testing.T) {
 				},
 			},
 			want: want{
-				sudokuBoard: board.BoardFromNumbers([9][9]int{}),
+				sudokuBoard: board.FromNumbers([9][9]int{}),
 			},
 		},
 		{
@@ -246,7 +246,7 @@ func Test_sudokuBoardFileRepo_GetBoardNumber(t *testing.T) {
 				},
 			},
 			want: want{
-				sudokuBoard: board.BoardFromNumbers([9][9]int{}),
+				sudokuBoard: board.FromNumbers([9][9]int{}),
 			},
 		},
 		{
@@ -266,7 +266,7 @@ func Test_sudokuBoardFileRepo_GetBoardNumber(t *testing.T) {
 				},
 			},
 			want: want{
-				sudokuBoard: board.BoardFromNumbers([9][9]int{
+				sudokuBoard: board.FromNumbers([9][9]int{
 					{1, 2, 3, 4, 5, 6, 7, 8, 9},
 					{10, 11, 12, 13, 14, 15, 16, 17, 18},
 					{19, 20, 21, 22, 23, 24, 25, 26, 27},
@@ -305,7 +305,7 @@ func Test_sudokuBoardFileRepo_GetBoardNumber(t *testing.T) {
 				},
 			},
 			want: want{
-				sudokuBoard: board.BoardFromNumbers([9][9]int{
+				sudokuBoard: board.FromNumbers([9][9]int{
 					{1, 2, 3, 4, 5, 6, 7, 8, 9},
 					{10, 11, 12, 13, 14, 15, 16, 17, 18},
 					{19, 20, 21, 22, 23, 24, 25, 26, 27},
@@ -353,7 +353,7 @@ func Test_sudokuBoardFileRepo_GetBoardNumber(t *testing.T) {
 				},
 			},
 			want: want{
-				sudokuBoard: board.BoardFromNumbers([9][9]int{
+				sudokuBoard: board.FromNumbers([9][9]int{
 					{1, 2, 3, 4, 5, 6, 7, 8, 9},
 					{10, 11, 12, 13, 14, 15, 16, 17, 18},
 					{19, 20, 21, 22, 23, 24, 25, 26, 27},
@@ -408,7 +408,7 @@ func Test_sudokuBoardFileRepo_SaveNewBoard(t *testing.T) {
 		{
 			name: "Zero board",
 			args: args{
-				sudokuBoard: board.BoardFromNumbers([9][9]int{}),
+				sudokuBoard: board.FromNumbers([9][9]int{}),
 			},
 			want: want{
 				expectedContent: []byte{
@@ -427,7 +427,7 @@ func Test_sudokuBoardFileRepo_SaveNewBoard(t *testing.T) {
 		{
 			name: "Always write to end of file",
 			args: args{
-				sudokuBoard:        board.BoardFromNumbers([9][9]int{}),
+				sudokuBoard:        board.FromNumbers([9][9]int{}),
 				initialFileContent: []byte{255},
 			},
 			want: want{
@@ -448,7 +448,7 @@ func Test_sudokuBoardFileRepo_SaveNewBoard(t *testing.T) {
 		{
 			name: "full list",
 			args: args{
-				sudokuBoard: board.BoardFromNumbers([9][9]int{
+				sudokuBoard: board.FromNumbers([9][9]int{
 					{1, 2, 3, 4, 5, 6, 7, 8, 9},
 					{10, 11, 12, 13, 14, 15, 16, 17, 18},
 					{19, 20, 21, 22, 23, 24, 25, 26, 27},

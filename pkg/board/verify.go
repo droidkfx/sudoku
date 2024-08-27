@@ -7,7 +7,7 @@ region is valid. It returns true if the board is valid and false otherwise. It u
   - VerifyRow
   - VerifyRegion
 */
-func VerifyBoard(board SudokuBoard) bool {
+func VerifyBoard(board *SudokuBoard) bool {
 	for i := 0; i < 9; i++ {
 		if !VerifyColumn(board, i) {
 			return false
@@ -29,7 +29,7 @@ numbers 1...9.
 It returns false if there are any duplicates, it will panic if the board contains any numbers outside the
 range [1,9], and true otherwise.
 */
-func VerifyColumn(board SudokuBoard, col int) bool {
+func VerifyColumn(board *SudokuBoard, col int) bool {
 	seen := [9]bool{}
 	for y := 0; y < 9; y++ {
 		val := board.GetAt(col, y)
@@ -51,7 +51,7 @@ numbers 1...9.
 It returns false if there are any duplicates, it will panic if the board contains any numbers outside the
 range [1,9], and true otherwise.
 */
-func VerifyRow(board SudokuBoard, row int) bool {
+func VerifyRow(board *SudokuBoard, row int) bool {
 	seen := [9]bool{}
 	for x := 0; x < 9; x++ {
 		val := board.GetAt(x, row)
@@ -83,7 +83,7 @@ So Region 4 for example contains all elements from (3,3) to (5,5).
 It returns false if there are any duplicates, it will panic if the board contains any numbers outside the
 range [1,9], and true otherwise.
 */
-func VerifyRegion(board SudokuBoard, region int) bool {
+func VerifyRegion(board *SudokuBoard, region int) bool {
 	seen := [9]bool{}
 	regionCoord := sudokuRegionMap[region]
 	for x := regionCoord.xstart; x <= regionCoord.xend; x++ {

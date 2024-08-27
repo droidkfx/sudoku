@@ -247,7 +247,7 @@ func TestVerifyColumn(t *testing.T) {
 				}
 			}()
 
-			if got := VerifyColumn(tt.args.board, tt.args.column); got != tt.want.expect {
+			if got := VerifyColumn(&tt.args.board, tt.args.column); got != tt.want.expect {
 				t.Errorf("VerifyColumn() = %v, want %v", got, tt.want)
 			}
 		})
@@ -499,7 +499,7 @@ func TestVerifyRow(t *testing.T) {
 				}
 			}()
 
-			if got := VerifyRow(tt.args.board, tt.args.row); got != tt.want.expect {
+			if got := VerifyRow(&tt.args.board, tt.args.row); got != tt.want.expect {
 				t.Errorf("VerifyRow() = %v, want %v", got, tt.want)
 			}
 		})
@@ -751,7 +751,7 @@ func TestVerifyRegion(t *testing.T) {
 				}
 			}()
 
-			if got := VerifyRegion(tt.args.board, tt.args.region); got != tt.want.expect {
+			if got := VerifyRegion(&tt.args.board, tt.args.region); got != tt.want.expect {
 				t.Errorf("VerifyRegion() = %v, want %v", got, tt.want)
 			}
 		})

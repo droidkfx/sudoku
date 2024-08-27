@@ -52,7 +52,7 @@ func (s *sudokuBoardFileRepo) GetRandomBoard() *board.SudokuBoard {
 
 	fSize := fStat.Size()
 	if fSize < dataLength {
-		return board.BoardFromNumbers([9][9]int{})
+		return board.FromNumbers([9][9]int{})
 	}
 
 	return s.dataToBoard(s.loadLine(rand.Intn(int(fSize / dataLength))))

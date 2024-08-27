@@ -6,7 +6,7 @@ type SudokuBoard struct {
 	board [9][9]int
 }
 
-func BoardFromNumbers(data [9][9]int) *SudokuBoard {
+func FromNumbers(data [9][9]int) *SudokuBoard {
 	board := [9][9]int{}
 	for i, list := range data {
 		for j, num := range list {

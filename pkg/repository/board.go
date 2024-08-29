@@ -10,6 +10,9 @@ import (
 )
 
 const dbFileName = "sudoku.db"
+const boardDataBytes = 41
+const lowMask uint8 = 0b0000_1111
+const highMask uint8 = 0b1111_0000
 
 type SudokuBoardRepo interface {
 	GetRandomBoard() *board.SudokuBoard
@@ -67,8 +70,8 @@ func (s *sudokuBoardFileRepo) SaveNewBoard(sudokuBoard *board.SudokuBoard) {
 }
 
 func (s *sudokuBoardFileRepo) loadLine(n int) []byte {
-	data := make([]byte, 81)
-	dataSize := int64(binary.Size(byte(0)) * 81)
+	data := make([]byte, 41)
+	dataSize := int64(41)
 	offset := dataSize * int64(n)
 
 	fStat, err := s.home.Stat()
@@ -99,21 +102,46 @@ func (s *sudokuBoardFileRepo) saveLineAtEnd(data []byte) {
 	}
 }
 
-func (s *sudokuBoardFileRepo) boardToData(sudokuBoard *board.SudokuBoard) []byte {
-	result := make([]byte, 81)
-	for i := 0; i < 9; i++ {
-		for j := 0; j < 9; j++ {
-			result[i+(j*9)] = byte(sudokuBoard.GetAt(i, j))
+func (s *sudokuBoardFileRepo) boardToData(b *board.SudokuBoard) []byte {
+	// 9x9 is 81 bytes, to make it divisible by 2 we add 1 -> 41
+	result := make([]byte, 0, boardDataBytes)
+
+	i, j := 0, 0
+	var currentByte byte
+	var high bool
+	for j < 9 {
+		if !high {
+			currentByte = lowMask
+			currentByte &= byte(b.GetAt(i, j))
+			high = true
+		} else {
+			currentByte |= highMask & (byte(b.GetAt(i, j)) << 4)
+			result = append(result, currentByte)
+			high = false
+		}
+
+		i++
+		if i >= 9 {
+			j++
+			i = 0
 		}
 	}
+	result = append(result, currentByte)
+
 	return result
 }
 
 func (s *sudokuBoardFileRepo) dataToBoard(data []byte) *board.SudokuBoard {
 	b := board.SudokuBoard{}
-	for i := 0; i < 9; i++ {
-		for j := 0; j < 9; j++ {
-			b.SetAt(i, j, int(data[i+(j*9)]))
+	for j := 0; j < 9; j++ {
+		for i := 0; i < 9; i++ {
+			index := i + (j * 9)
+			// even index -> high byte
+			if index%2 == 0 {
+				b.SetAt(i, j, int((data[index/2] & lowMask)))
+			} else {
+				b.SetAt(i, j, int(data[index/2]&highMask>>4))
+			}
 		}
 	}
 	return &b

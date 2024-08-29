@@ -15,9 +15,10 @@ const lowMask uint8 = 0b0000_1111
 const highMask uint8 = 0b1111_0000
 
 type SudokuBoardRepo interface {
-	GetRandomBoard() *board.SudokuBoard
-	GetBoardNumber(n int) *board.SudokuBoard
-	SaveNewBoard(sudokuBoard *board.SudokuBoard)
+	GetRandom() *board.SudokuBoard
+	GetNumber(n int) *board.SudokuBoard
+	SaveNew(sudokuBoard *board.SudokuBoard)
+	SaveAll(sudokuBoards []*board.SudokuBoard)
 }
 
 func NewSudokuBoardRepo(dbLocation string) (SudokuBoardRepo, func()) {
@@ -46,7 +47,7 @@ func (s *sudokuBoardFileRepo) shutdown() {
 	_ = s.home.Close()
 }
 
-func (s *sudokuBoardFileRepo) GetRandomBoard() *board.SudokuBoard {
+func (s *sudokuBoardFileRepo) GetRandom() *board.SudokuBoard {
 	dataLength := int64(binary.Size(byte(0)) * 81)
 	fStat, err := s.home.Stat()
 	if err != nil {
@@ -58,18 +59,26 @@ func (s *sudokuBoardFileRepo) GetRandomBoard() *board.SudokuBoard {
 		return board.FromNumbers([9][9]int{})
 	}
 
-	return s.dataToBoard(s.loadLine(rand.Intn(int(fSize / dataLength))))
+	return s.dataToBoard(s.loadBoard(rand.Intn(int(fSize / dataLength))))
 }
 
-func (s *sudokuBoardFileRepo) GetBoardNumber(n int) *board.SudokuBoard {
-	return s.dataToBoard(s.loadLine(n))
+func (s *sudokuBoardFileRepo) GetNumber(n int) *board.SudokuBoard {
+	return s.dataToBoard(s.loadBoard(n))
 }
 
-func (s *sudokuBoardFileRepo) SaveNewBoard(sudokuBoard *board.SudokuBoard) {
-	s.saveLineAtEnd(s.boardToData(sudokuBoard))
+func (s *sudokuBoardFileRepo) SaveNew(sudokuBoard *board.SudokuBoard) {
+	s.SaveAll([]*board.SudokuBoard{sudokuBoard})
 }
 
-func (s *sudokuBoardFileRepo) loadLine(n int) []byte {
+func (s *sudokuBoardFileRepo) SaveAll(sudokuBoards []*board.SudokuBoard) {
+	data := make([]byte, 0, boardDataBytes*len(sudokuBoards))
+	for _, b := range sudokuBoards {
+		data = append(data, s.boardToData(b)...)
+	}
+	s.saveToEnd(data)
+}
+
+func (s *sudokuBoardFileRepo) loadBoard(n int) []byte {
 	data := make([]byte, 41)
 	dataSize := int64(41)
 	offset := dataSize * int64(n)
@@ -90,7 +99,7 @@ func (s *sudokuBoardFileRepo) loadLine(n int) []byte {
 	return data
 }
 
-func (s *sudokuBoardFileRepo) saveLineAtEnd(data []byte) {
+func (s *sudokuBoardFileRepo) saveToEnd(data []byte) {
 	fStat, err := s.home.Stat()
 	if err != nil {
 		panic(err)

@@ -133,7 +133,7 @@ func Test_sudokuBoardFileRepo_GetRandomBoard(t *testing.T) {
 			_ = file.Close()
 
 			s, sd := NewSudokuBoardRepoUsingFs(fs)
-			_ = s.GetRandomBoard()
+			_ = s.GetRandom()
 			sd()
 		})
 	}
@@ -317,11 +317,11 @@ func Test_sudokuBoardFileRepo_GetBoardNumber(t *testing.T) {
 			_ = file.Close()
 
 			s, sd := NewSudokuBoardRepoUsingFs(fs)
-			b := s.GetBoardNumber(tt.args.boardNumber)
+			b := s.GetNumber(tt.args.boardNumber)
 			sd()
 
 			if !reflect.DeepEqual(b, tt.want.sudokuBoard) {
-				t.Errorf("sudokuBoardFileRepo.SaveNewBoard() = \n%v, want \n%v", b, tt.want.sudokuBoard)
+				t.Errorf("sudokuBoardFileRepo.SaveNew() = \n%v, want \n%v", b, tt.want.sudokuBoard)
 			}
 		})
 	}
@@ -413,13 +413,13 @@ func Test_sudokuBoardFileRepo_SaveNewBoard(t *testing.T) {
 			_ = file.Close()
 
 			s, sd := NewSudokuBoardRepoUsingFs(fs)
-			s.SaveNewBoard(tt.args.sudokuBoard)
+			s.SaveNew(tt.args.sudokuBoard)
 			sd()
 
 			file, _ = fs.Open(dbFileName)
 			content, _ := afero.ReadAll(file)
 			if !reflect.DeepEqual(content, tt.want.expectedContent) {
-				t.Errorf("sudokuBoardFileRepo.SaveNewBoard() = \n%v, want \n%v", content, tt.want.expectedContent)
+				t.Errorf("sudokuBoardFileRepo.SaveNew() = \n%v, want \n%v", content, tt.want.expectedContent)
 			}
 		})
 	}

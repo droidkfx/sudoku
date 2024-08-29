@@ -2,7 +2,6 @@ package solver
 
 import (
 	"fmt"
-	"math/rand/v2"
 
 	"droidkfx.com/sudoku/pkg/board"
 )
@@ -21,22 +20,6 @@ type GuessOrderProvider func(i, j, v int) int
 func NewStaticOrderGuesser(order []int) GuessOrderProvider {
 	return func(i, j, v int) int {
 		return order[v]
-	}
-}
-
-func NewRandomOrderGuesser(swapIteration int) GuessOrderProvider {
-	list := []int{0, 1, 2, 3, 4, 5, 6, 7, 8}
-	listI := 0
-	return func(_, _, v int) int {
-		listI++
-		if listI >= 9 {
-			for i := 0; i < swapIteration; i++ {
-				x, y := rand.IntN(9), rand.IntN(9)
-				list[x], list[y] = list[y], list[x]
-			}
-		}
-
-		return list[v]
 	}
 }
 
@@ -115,35 +98,6 @@ func tryValue(cfg GuessSolverConfig, board *board.SudokuBoard, values [9][9][9]b
 	}
 
 	return solveByGuessing(cfg, board, values, nextX, nextY, metrics)
-}
-
-func untryValue(board *board.SudokuBoard, values [9][9][9]bool, x, y int) {
-	value := board.GetAt(x, y)
-
-	for i := 0; i < 9; i++ {
-		valuesSeen := getIntersectingValues(board, x, i)
-		if !valuesSeen[value-1] {
-			values[x][i][value-1] = true
-		}
-	}
-
-	for i := 0; i < 9; i++ {
-		valuesSeen := getIntersectingValues(board, i, y)
-		if !valuesSeen[value-1] {
-			values[i][y][value-1] = true
-		}
-	}
-
-	regionX := x / 3
-	regionY := y / 3
-	for i := 0; i < 3; i++ {
-		for j := 0; j < 3; j++ {
-			valuesSeen := getIntersectingValues(board, regionX*3+i, regionY*3+j)
-			if !valuesSeen[value-1] {
-				values[regionX*3+i][regionY*3+j][value-1] = true
-			}
-		}
-	}
 }
 
 func GetPossibleValues(board *board.SudokuBoard) [9][9][9]bool {

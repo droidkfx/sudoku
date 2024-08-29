@@ -20,16 +20,31 @@ func main() {
 	var totalTime time.Duration
 	lastReset := startTime.Add(-1 * time.Hour)
 	boards := make([]*board.SudokuBoard, len(perms))
-	for j := 0; j < len(perms); j++ {
-		boards[j] = &board.SudokuBoard{}
-		_ = solver.SolveByGuessing(solver.GuessConfig(solver.NewStaticOrderGuesser(perms[j])), boards[j])
+	doneChan := make(chan bool)
 
+	go func() {
+		for j := 0; j < len(perms); j++ {
+			boards[j] = &board.SudokuBoard{}
+			go func(b *board.SudokuBoard, p []int) {
+				_ = solver.SolveByGuessing(solver.GuessConfig(solver.NewStaticOrderGuesser(perms[j])), boards[j])
+				doneChan <- true
+			}(boards[j], perms[j])
+		}
+	}()
+
+	doneCount := 0
+	for range doneChan {
+		doneCount++
 		if time.Since(lastReset) > time.Millisecond*250 {
 			totalTime = time.Since(startTime)
-			fmt.Printf("Boards generated: %d (%d/s)\r", j, int(float64(j)/totalTime.Seconds()))
+			fmt.Printf("Boards generated: %d (%d/s)\r", doneCount, int(float64(doneCount)/totalTime.Seconds()))
 			lastReset = time.Now()
 		}
+		if doneCount == len(perms) {
+			close(doneChan)
+		}
 	}
+
 	fmt.Printf("Boards generated: %d (%d/s)\r\n", len(perms), int(float64(len(perms))/totalTime.Seconds()))
 	fmt.Print("Saving Boards...")
 	r.SaveAll(boards)

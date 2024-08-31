@@ -1,6 +1,21 @@
 package board
 
 /*
+IsSolved is a subset of VerifyBoard, in addition to meeting all sudoku requirements, it also checks if the board is
+completely filled in. It returns true if the board is filled in and VerifyBoard returns true and false otherwise.
+*/
+func IsSolved(board *SudokuBoard) bool {
+	for x := 0; x < 9; x++ {
+		for y := 0; y < 9; y++ {
+			if board.GetAt(x, y) == 0 {
+				return false
+			}
+		}
+	}
+	return VerifyBoard(board)
+}
+
+/*
 VerifyBoard checks if a SudokuBoard is valid. It checks if the board is valid by checking if each column, row, and
 region is valid. It returns true if the board is valid and false otherwise. It uses the following helper functions:
   - VerifyColumn

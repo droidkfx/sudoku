@@ -66,6 +66,12 @@ func solveByGuessing(cfg *GuessSolverConfig, board *board.SudokuBoard, values [9
 		if !anyPossibleValues {
 			return false
 		}
+	} else {
+		nextX, nextY, hasNext := getNextCoords(x, y)
+		if !hasNext {
+			return true
+		}
+		return solveByGuessing(cfg, board, values, nextX, nextY, metrics)
 	}
 
 	return board.GetAt(x, y) != 0
@@ -74,14 +80,9 @@ func solveByGuessing(cfg *GuessSolverConfig, board *board.SudokuBoard, values [9
 func tryValue(cfg *GuessSolverConfig, board *board.SudokuBoard, values [9][9][9]bool, x, y, value int,
 	metrics *SolveMetrics) bool {
 	board.SetAt(x, y, value)
-	nextX := x + 1
-	nextY := y
-	if nextX == 9 {
-		nextX = 0
-		nextY++
-		if nextY == 9 {
-			return true
-		}
+	nextX, nextY, hasNext := getNextCoords(x, y)
+	if !hasNext {
+		return true
 	}
 
 	for i := 0; i < 9; i++ {
@@ -98,6 +99,19 @@ func tryValue(cfg *GuessSolverConfig, board *board.SudokuBoard, values [9][9][9]
 	}
 
 	return solveByGuessing(cfg, board, values, nextX, nextY, metrics)
+}
+
+func getNextCoords(x, y int) (int, int, bool) {
+	nextX := x + 1
+	nextY := y
+	if nextX == 9 {
+		nextX = 0
+		nextY++
+		if nextY == 9 {
+			return 0, 0, false
+		}
+	}
+	return nextX, nextY, true
 }
 
 func GetPossibleValues(board *board.SudokuBoard) [9][9][9]bool {

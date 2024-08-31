@@ -42,11 +42,11 @@ func (s SolveMetrics) String() string {
 func SolveByGuessing(cfg GuessSolverConfig, board *board.SudokuBoard) SolveMetrics {
 	possibleValues := GetPossibleValues(board)
 	metrics := SolveMetrics{}
-	solveByGuessing(cfg, board, possibleValues, 0, 0, &metrics)
+	solveByGuessing(&cfg, board, possibleValues, 0, 0, &metrics)
 	return metrics
 }
 
-func solveByGuessing(cfg GuessSolverConfig, board *board.SudokuBoard, values [9][9][9]bool, x, y int,
+func solveByGuessing(cfg *GuessSolverConfig, board *board.SudokuBoard, values [9][9][9]bool, x, y int,
 	metrics *SolveMetrics) bool {
 	if board.GetAt(x, y) == 0 {
 		anyPossibleValues := false
@@ -54,6 +54,7 @@ func solveByGuessing(cfg GuessSolverConfig, board *board.SudokuBoard, values [9]
 			number := cfg.NumberOrder(x, y, v)
 			if values[x][y][number] {
 				anyPossibleValues = true
+				metrics.tryCount++
 				if tryValue(cfg, board, values, x, y, number+1, metrics) {
 					return true
 				} else {
@@ -70,10 +71,9 @@ func solveByGuessing(cfg GuessSolverConfig, board *board.SudokuBoard, values [9]
 	return board.GetAt(x, y) != 0
 }
 
-func tryValue(cfg GuessSolverConfig, board *board.SudokuBoard, values [9][9][9]bool, x, y, value int,
+func tryValue(cfg *GuessSolverConfig, board *board.SudokuBoard, values [9][9][9]bool, x, y, value int,
 	metrics *SolveMetrics) bool {
 	board.SetAt(x, y, value)
-	metrics.tryCount++
 	nextX := x + 1
 	nextY := y
 	if nextX == 9 {

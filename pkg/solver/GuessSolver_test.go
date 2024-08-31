@@ -1,17 +1,18 @@
 package solver
 
 import (
+	"runtime"
 	"testing"
 
 	"droidkfx.com/sudoku/pkg/board"
 )
 
 func BenchmarkSolveByGuessing(b *testing.B) {
-	var metrics SolveMetrics
 	for i := 0; i < b.N; i++ {
-		metrics = SolveByGuessing(DefaultGuessConfig(), &board.SudokuBoard{})
+		metrics := SolveByGuessing(DefaultGuessConfig(), &board.SudokuBoard{})
+		// Keep the compiler from optimizing out the function call
+		runtime.KeepAlive(metrics)
 	}
-	b.Log(metrics)
 }
 
 func TestSolveByGuessing(t *testing.T) {

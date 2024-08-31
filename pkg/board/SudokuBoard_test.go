@@ -1,6 +1,9 @@
 package board
 
-import "testing"
+import (
+	"runtime"
+	"testing"
+)
 
 func BenchmarkSudokuBoard_GetAt(b *testing.B) {
 	s := &SudokuBoard{
@@ -12,13 +15,11 @@ func BenchmarkSudokuBoard_GetAt(b *testing.B) {
 
 	// Ignore setup information
 	b.ResetTimer()
-	var value int
 	for i := 0; i < b.N; i++ {
+		value := s.GetAt(i%9, i%9)
 		// prevent compiler optimizations
-		value = s.GetAt(i%9, i%9)
-
+		runtime.KeepAlive(value)
 	}
-	s.board[0][4] = value
 }
 
 func initDefaultBoard() SudokuBoard {

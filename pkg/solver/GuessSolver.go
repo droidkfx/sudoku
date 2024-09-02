@@ -85,19 +85,7 @@ func tryValue(cfg *GuessSolverConfig, board *board.SudokuBoard, values [9][9][9]
 		return true
 	}
 
-	for i := 0; i < 9; i++ {
-		values[x][i][value-1] = false
-		values[i][y][value-1] = false
-	}
-
-	regionX := x / 3
-	regionY := y / 3
-	for i := 0; i < 3; i++ {
-		for j := 0; j < 3; j++ {
-			values[regionX*3+i][regionY*3+j][value-1] = false
-		}
-	}
-
+	propagateNumberSetToOptions(&values, x, y, value)
 	return solveByGuessing(cfg, board, values, nextX, nextY, metrics)
 }
 
@@ -112,49 +100,4 @@ func getNextCoords(x, y int) (int, int, bool) {
 		}
 	}
 	return nextX, nextY, true
-}
-
-func GetPossibleValues(board *board.SudokuBoard) [9][9][9]bool {
-	possibleValues := [9][9][9]bool{}
-	for x := 0; x < 9; x++ {
-		for y := 0; y < 9; y++ {
-			if board.GetAt(x, y) != 0 {
-				continue
-			} else {
-				valuesSeen := getIntersectingValues(board, x, y)
-
-				for i := 0; i < 9; i++ {
-					possibleValues[x][y][i] = !valuesSeen[i]
-				}
-			}
-		}
-	}
-	return possibleValues
-}
-
-func getIntersectingValues(board *board.SudokuBoard, x int, y int) [9]bool {
-	valuesSeen := [9]bool{}
-	for i := 0; i < 9; i++ {
-		i2 := board.GetAt(x, i) - 1
-		if i2 != -1 {
-			valuesSeen[i2] = true
-		}
-
-		i3 := board.GetAt(i, y) - 1
-		if i3 != -1 {
-			valuesSeen[i3] = true
-		}
-	}
-
-	regionX := x / 3
-	regionY := y / 3
-	for i := 0; i < 3; i++ {
-		for j := 0; j < 3; j++ {
-			i2 := board.GetAt(regionX*3+i, regionY*3+j) - 1
-			if i2 != -1 {
-				valuesSeen[i2] = true
-			}
-		}
-	}
-	return valuesSeen
 }

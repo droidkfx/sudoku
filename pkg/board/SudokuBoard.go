@@ -34,3 +34,11 @@ func (s *SudokuBoard) String() string {
 	}
 	return result
 }
+
+func (s *SudokuBoard) Copy() *SudokuBoard {
+	board := [9][9]int{}
+	for i := 0; i < 9; i++ {
+		copy(board[i][:], s.board[i][:])
+	}
+	return &SudokuBoard{board: board}
+}

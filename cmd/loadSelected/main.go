@@ -4,14 +4,17 @@ import (
 	"fmt"
 
 	"droidkfx.com/sudoku/pkg/repository"
+	"droidkfx.com/sudoku/pkg/solver"
 )
 
 func main() {
-	r, sd := repository.NewSudokuBoardRepo("./data")
+	r, sd := repository.NewSudokuBoardRepo("./data/nyt/med")
 	defer sd()
 
-	fmt.Println(r.GetNumber(0))
-	fmt.Println(r.GetNumber(900))
-	fmt.Println(r.GetNumber(15000))
-	fmt.Println(r.GetNumber(50000))
+	b := r.GetNumber(0)
+	fmt.Println(b)
+	solution := solver.SolveByStrategies(b)
+	for _, step := range solution {
+		fmt.Println(step)
+	}
 }

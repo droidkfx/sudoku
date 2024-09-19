@@ -1,0 +1,24 @@
+.sudoku-cell {
+    width: 50px;
+    height: 50px;
+    background-color: #6c87fd;
+    border: 1px solid #000;
+
+    &:hover {
+        background-color: #4f6cd1;
+    }
+}
+
+.sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    border: 2px solid #000;
+}
+
+.sudoku-region {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    border: 1px solid #000;
+}

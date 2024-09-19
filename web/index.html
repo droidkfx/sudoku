@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="sudoku.css">
+</head>
+<body>
+
+<header>
+    <h1>Sudoku</h1>
+</header>
+
+<main>
+    <div class="sudoku-board" id="board">
+        <div class="sudoku-region" id="region-0">
+            <div class="sudoku-cell" id="r0-cell-0"></div>
+            <div class="sudoku-cell" id="r0-cell-1"></div>
+            <div class="sudoku-cell" id="r0-cell-2"></div>
+            <div class="sudoku-cell" id="r0-cell-3"></div>
+            <div class="sudoku-cell" id="r0-cell-4"></div>
+            <div class="sudoku-cell" id="r0-cell-5"></div>
+            <div class="sudoku-cell" id="r0-cell-6"></div>
+            <div class="sudoku-cell" id="r0-cell-7"></div>
+            <div class="sudoku-cell" id="r0-cell-8"></div>
+        </div>
+        <div class="sudoku-region" id="region-1">
+            <div class="sudoku-cell" id="r1-cell-0"></div>
+            <div class="sudoku-cell" id="r1-cell-1"></div>
+            <div class="sudoku-cell" id="r1-cell-2"></div>
+            <div class="sudoku-cell" id="r1-cell-3"></div>
+            <div class="sudoku-cell" id="r1-cell-4"></div>
+            <div class="sudoku-cell" id="r1-cell-5"></div>
+            <div class="sudoku-cell" id="r1-cell-6"></div>
+            <div class="sudoku-cell" id="r1-cell-7"></div>
+            <div class="sudoku-cell" id="r1-cell-8"></div>
+        </div>
+        <div class="sudoku-region" id="region-2">
+            <div class="sudoku-cell" id="r2-cell-0"></div>
+            <div class="sudoku-cell" id="r2-cell-1"></div>
+            <div class="sudoku-cell" id="r2-cell-2"></div>
+            <div class="sudoku-cell" id="r2-cell-3"></div>
+            <div class="sudoku-cell" id="r2-cell-4"></div>
+            <div class="sudoku-cell" id="r2-cell-5"></div>
+            <div class="sudoku-cell" id="r2-cell-6"></div>
+            <div class="sudoku-cell" id="r2-cell-7"></div>
+            <div class="sudoku-cell" id="r2-cell-8"></div>
+        </div>
+        <div class="sudoku-region" id="region-3">
+            <div class="sudoku-cell" id="r3-cell-0"></div>
+            <div class="sudoku-cell" id="r3-cell-1"></div>
+            <div class="sudoku-cell" id="r3-cell-2"></div>
+            <div class="sudoku-cell" id="r3-cell-3"></div>
+            <div class="sudoku-cell" id="r3-cell-4"></div>
+            <div class="sudoku-cell" id="r3-cell-5"></div>
+            <div class="sudoku-cell" id="r3-cell-6"></div>
+            <div class="sudoku-cell" id="r3-cell-7"></div>
+            <div class="sudoku-cell" id="r3-cell-8"></div>
+        </div>
+        <div class="sudoku-region" id="region-4">
+            <div class="sudoku-cell" id="r4-cell-0"></div>
+            <div class="sudoku-cell" id="r4-cell-1"></div>
+            <div class="sudoku-cell" id="r4-cell-2"></div>
+            <div class="sudoku-cell" id="r4-cell-3"></div>
+            <div class="sudoku-cell" id="r4-cell-4"></div>
+            <div class="sudoku-cell" id="r4-cell-5"></div>
+            <div class="sudoku-cell" id="r4-cell-6"></div>
+            <div class="sudoku-cell" id="r4-cell-7"></div>
+            <div class="sudoku-cell" id="r4-cell-8"></div>
+        </div>
+        <div class="sudoku-region" id="region-5">
+            <div class="sudoku-cell" id="r5-cell-0"></div>
+            <div class="sudoku-cell" id="r5-cell-1"></div>
+            <div class="sudoku-cell" id="r5-cell-2"></div>
+            <div class="sudoku-cell" id="r5-cell-3"></div>
+            <div class="sudoku-cell" id="r5-cell-4"></div>
+            <div class="sudoku-cell" id="r5-cell-5"></div>
+            <div class="sudoku-cell" id="r5-cell-6"></div>
+            <div class="sudoku-cell" id="r5-cell-7"></div>
+            <div class="sudoku-cell" id="r5-cell-8"></div>
+        </div>
+        <div class="sudoku-region" id="region-6">
+            <div class="sudoku-cell" id="r6-cell-0"></div>
+            <div class="sudoku-cell" id="r6-cell-1"></div>
+            <div class="sudoku-cell" id="r6-cell-2"></div>
+            <div class="sudoku-cell" id="r6-cell-3"></div>
+            <div class="sudoku-cell" id="r6-cell-4"></div>
+            <div class="sudoku-cell" id="r6-cell-5"></div>
+            <div class="sudoku-cell" id="r6-cell-6"></div>
+            <div class="sudoku-cell" id="r6-cell-7"></div>
+            <div class="sudoku-cell" id="r6-cell-8"></div>
+        </div>
+        <div class="sudoku-region" id="region-7">
+            <div class="sudoku-cell" id="r7-cell-0"></div>
+            <div class="sudoku-cell" id="r7-cell-1"></div>
+            <div class="sudoku-cell" id="r7-cell-2"></div>
+            <div class="sudoku-cell" id="r7-cell-3"></div>
+            <div class="sudoku-cell" id="r7-cell-4"></div>
+            <div class="sudoku-cell" id="r7-cell-5"></div>
+            <div class="sudoku-cell" id="r7-cell-6"></div>
+            <div class="sudoku-cell" id="r7-cell-7"></div>
+            <div class="sudoku-cell" id="r7-cell-8"></div>
+        </div>
+        <div class="sudoku-region" id="region-8">
+            <div class="sudoku-cell" id="r8-cell-0"></div>
+            <div class="sudoku-cell" id="r8-cell-1"></div>
+            <div class="sudoku-cell" id="r8-cell-2"></div>
+            <div class="sudoku-cell" id="r8-cell-3"></div>
+            <div class="sudoku-cell" id="r8-cell-4"></div>
+            <div class="sudoku-cell" id="r8-cell-5"></div>
+            <div class="sudoku-cell" id="r8-cell-6"></div>
+            <div class="sudoku-cell" id="r8-cell-7"></div>
+            <div class="sudoku-cell" id="r8-cell-8"></div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>Kyle Brown | 2024 - <span id="cw-year">2024</span> | System time: <span id="system-time">00:00:00 AM</span></p>
+</footer>
+<script src="time.js"></script>
+</body>
+</html>

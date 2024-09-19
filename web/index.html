@@ -15,15 +15,39 @@
 <main>
     <div class="sudoku-board" id="board">
         <div class="sudoku-region" id="region-0">
-            <div class="sudoku-cell" id="r0-cell-0"></div>
-            <div class="sudoku-cell" id="r0-cell-1"></div>
-            <div class="sudoku-cell" id="r0-cell-2"></div>
-            <div class="sudoku-cell" id="r0-cell-3"></div>
+            <div class="sudoku-cell locked" id="r0-cell-0">1</div>
+            <div class="sudoku-cell" id="r0-cell-1">2</div>
+            <div class="sudoku-cell" id="r0-cell-2">
+                <div class="sudoku-cell-notes">
+                    <div class="sudoku-cell-notes-item">1</div>
+                    <div class="sudoku-cell-notes-item">2</div>
+                    <div class="sudoku-cell-notes-item">3</div>
+                    <div class="sudoku-cell-notes-item">4</div>
+                    <div class="sudoku-cell-notes-item hidden">5</div>
+                    <div class="sudoku-cell-notes-item">6</div>
+                    <div class="sudoku-cell-notes-item hidden">7</div>
+                    <div class="sudoku-cell-notes-item">8</div>
+                    <div class="sudoku-cell-notes-item">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="r0-cell-3">3
+                <div class="sudoku-cell-notes hidden">
+                    <div class="sudoku-cell-notes-item">1</div>
+                    <div class="sudoku-cell-notes-item">2</div>
+                    <div class="sudoku-cell-notes-item">3</div>
+                    <div class="sudoku-cell-notes-item">4</div>
+                    <div class="sudoku-cell-notes-item">5</div>
+                    <div class="sudoku-cell-notes-item">6</div>
+                    <div class="sudoku-cell-notes-item">7</div>
+                    <div class="sudoku-cell-notes-item">8</div>
+                    <div class="sudoku-cell-notes-item">9</div>
+                </div>
+            </div>
             <div class="sudoku-cell" id="r0-cell-4"></div>
             <div class="sudoku-cell" id="r0-cell-5"></div>
             <div class="sudoku-cell" id="r0-cell-6"></div>
             <div class="sudoku-cell" id="r0-cell-7"></div>
-            <div class="sudoku-cell" id="r0-cell-8"></div>
+            <div class="sudoku-cell selected" id="r0-cell-8"></div>
         </div>
         <div class="sudoku-region" id="region-1">
             <div class="sudoku-cell" id="r1-cell-0"></div>

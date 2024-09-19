@@ -1,11 +1,51 @@
 .sudoku-cell {
+    /*sizing and coloring*/
     min-width: 7.5vh;
     min-height: 7.5vh;
     background-color: var(--color-primary);
+    color: var(--color-quaternary);
     border: 1px dotted var(--color-tertiary);
+
+    /*layout*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*Font setup*/
+    font-size: 6vh;
+    font-family: var(--font-family);
 
     &:hover {
         background-color: var(--color-secondary);
+    }
+
+    &.selected {
+        background-color: var(--color-secondary);
+    }
+
+    &.locked {
+        color: var(--color-tertiary);
+    }
+}
+
+.sudoku-cell-notes {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 1vh;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.sudoku-cell-notes-item {
+    font-size: 2vh;
+    color: var(--color-quaternary);
+    font-family: var(--font-family);
+
+    &.hidden {
+        opacity: 0;
     }
 }
 

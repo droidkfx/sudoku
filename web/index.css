@@ -1,11 +1,22 @@
-h1 {
-    color: maroon;
+:root {
+    --font-size: 16px;
+    --font-family: 'Arial', sans-serif;
+    --color-primary: #DB504A;
+    --color-secondary: #4C061D;
+    --color-tertiary: #E3B505;
+    --color-quaternary: #56A3A6;
+    --color-background: #00171F;
 }
 
 body {
+    /*alignment*/
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    /*default styles*/
+    background-color: var(--color-background);
+    color: var(--color-tertiary);
 }

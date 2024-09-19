@@ -1,11 +1,11 @@
 .sudoku-cell {
-    width: 50px;
-    height: 50px;
-    background-color: #6c87fd;
-    border: 1px solid #000;
+    min-width: 7.5vh;
+    min-height: 7.5vh;
+    background-color: var(--color-primary);
+    border: 1px dotted var(--color-tertiary);
 
     &:hover {
-        background-color: #4f6cd1;
+        background-color: var(--color-secondary);
     }
 }
 
@@ -13,12 +13,12 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
-    border: 2px solid #000;
+    border: 2px solid var(--color-tertiary);
 }
 
 .sudoku-region {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
-    border: 1px solid #000;
+    border: 1px solid var(--color-tertiary);
 }

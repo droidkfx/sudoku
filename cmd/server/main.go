@@ -3,13 +3,14 @@ package main
 import (
 	"fmt"
 	"net/http"
+
+	"droidkfx.com/sudoku/cmd/server/controller"
 )
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/foo", func(w http.ResponseWriter, r *http.Request) {
-		_, _ = w.Write([]byte("Hello, World!"))
-	})
+	controller.RegisterHealthHandlers(mux)
+	controller.RegisterBoardHandlers(mux)
 	mux.Handle("/", http.FileServer(http.Dir("./web")))
 
 	fmt.Println("Starting server, access at http://localhost:8080")

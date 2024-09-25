@@ -1,3 +1,5 @@
+"use strict";
+
 const systemTimeSpan = document.getElementById("system-time");
 const cwYearSpan = document.getElementById("cw-year");
 

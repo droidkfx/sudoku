@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Sudoku</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="sudoku.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sudoku.css">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 </header>
 
 <main>
-    <div class="sudoku-board" id="board">
+    <div class="sudoku-board" id="sudoku-board">
         <div class="sudoku-region" id="region-0">
             <div class="sudoku-cell locked" id="r0-cell-0">1</div>
             <div class="sudoku-cell" id="r0-cell-1">2</div>
@@ -138,11 +138,12 @@
             <div class="sudoku-cell" id="r8-cell-8"></div>
         </div>
     </div>
+    <script type="module" src="js/sudoku.js"></script>
 </main>
 
 <footer>
     <p>Kyle Brown | 2024 - <span id="cw-year">00/0000</span> | System time: <span id="system-time">00:00:00 AM</span></p>
-    <script src="time.js"></script>
+    <script src="js/time.js"></script>
 </footer>
 
 </body>

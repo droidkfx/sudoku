@@ -16,7 +16,7 @@
     font-family: var(--font-family);
 
     &:hover {
-        background-color: var(--color-secondary);
+        background-color: var(--color-secondary-lighter);
     }
 
     &.selected {

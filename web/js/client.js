@@ -14,4 +14,9 @@ export class SudokuClient {
         let response = await fetch("/board/" + number);
         return response.json();
     }
+
+    async GetRandomBoard() {
+        let response = await fetch("/board/random");
+        return response.json();
+    }
 }

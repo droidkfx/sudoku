@@ -15,134 +15,1164 @@
 <main>
     <div class="sudoku-board" id="sudoku-board">
         <div class="sudoku-region" id="region-0">
-            <div class="sudoku-cell locked" id="r0-cell-0">1</div>
-            <div class="sudoku-cell" id="r0-cell-1">2</div>
-            <div class="sudoku-cell" id="r0-cell-2">
-                <div class="sudoku-cell-notes">
-                    <div class="sudoku-cell-notes-item">1</div>
-                    <div class="sudoku-cell-notes-item">2</div>
-                    <div class="sudoku-cell-notes-item">3</div>
-                    <div class="sudoku-cell-notes-item">4</div>
-                    <div class="sudoku-cell-notes-item hidden">5</div>
-                    <div class="sudoku-cell-notes-item">6</div>
-                    <div class="sudoku-cell-notes-item hidden">7</div>
-                    <div class="sudoku-cell-notes-item">8</div>
-                    <div class="sudoku-cell-notes-item">9</div>
+            <div class="sudoku-cell" id="cell-00">
+                <span id="cell-00-value"/>
+                <div class="sudoku-cell-notes" id="cell-00-notes">
+                    <div class="sudoku-cell-notes-item hidden"id="cell-00-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden"id="cell-00-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden"id="cell-00-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden"id="cell-00-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden"id="cell-00-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden"id="cell-00-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden"id="cell-00-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden"id="cell-00-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden"id="cell-00-note-9">9</div>
                 </div>
             </div>
-            <div class="sudoku-cell" id="r0-cell-3">3
-                <div class="sudoku-cell-notes hidden">
-                    <div class="sudoku-cell-notes-item">1</div>
-                    <div class="sudoku-cell-notes-item">2</div>
-                    <div class="sudoku-cell-notes-item">3</div>
-                    <div class="sudoku-cell-notes-item">4</div>
-                    <div class="sudoku-cell-notes-item">5</div>
-                    <div class="sudoku-cell-notes-item">6</div>
-                    <div class="sudoku-cell-notes-item">7</div>
-                    <div class="sudoku-cell-notes-item">8</div>
-                    <div class="sudoku-cell-notes-item">9</div>
+            <div class="sudoku-cell" id="cell-10">
+                <span id="cell-10-value"/>
+                <div class="sudoku-cell-notes" id="cell-10-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-10-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-10-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-10-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-10-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-10-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-10-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-10-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-10-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-10-note-9">9</div>
                 </div>
             </div>
-            <div class="sudoku-cell" id="r0-cell-4"></div>
-            <div class="sudoku-cell" id="r0-cell-5"></div>
-            <div class="sudoku-cell" id="r0-cell-6"></div>
-            <div class="sudoku-cell" id="r0-cell-7"></div>
-            <div class="sudoku-cell selected" id="r0-cell-8"></div>
+            <div class="sudoku-cell" id="cell-20">
+                <span id="cell-20-value"/>
+                <div class="sudoku-cell-notes" id="cell-20-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-20-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-20-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-20-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-20-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-20-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-20-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-20-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-20-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-20-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-01">
+                <span id="cell-01-value"/>
+                <div class="sudoku-cell-notes" id="cell-01-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-01-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-01-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-01-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-01-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-01-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-01-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-01-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-01-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-01-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-11">
+                <span id="cell-11-value"/>
+                <div class="sudoku-cell-notes" id="cell-11-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-11-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-11-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-11-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-11-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-11-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-11-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-11-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-11-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-11-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-21">
+                <span id="cell-21-value"/>
+                <div class="sudoku-cell-notes" id="cell-21-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-21-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-21-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-21-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-21-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-21-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-21-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-21-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-21-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-21-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-02">
+                <span id="cell-02-value"/>
+                <div class="sudoku-cell-notes" id="cell-02-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-02-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-02-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-02-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-02-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-02-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-02-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-02-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-02-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-02-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-12">
+                <span id="cell-12-value"/>
+                <div class="sudoku-cell-notes" id="cell-12-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-12-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-12-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-12-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-12-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-12-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-12-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-12-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-12-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-12-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-22">
+                <span id="cell-22-value"/>
+                <div class="sudoku-cell-notes" id="cell-22-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-22-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-22-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-22-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-22-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-22-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-22-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-22-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-22-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-22-note-9">9</div>
+                </div>
+            </div>
         </div>
         <div class="sudoku-region" id="region-1">
-            <div class="sudoku-cell" id="r1-cell-0"></div>
-            <div class="sudoku-cell" id="r1-cell-1"></div>
-            <div class="sudoku-cell" id="r1-cell-2"></div>
-            <div class="sudoku-cell" id="r1-cell-3"></div>
-            <div class="sudoku-cell" id="r1-cell-4"></div>
-            <div class="sudoku-cell" id="r1-cell-5"></div>
-            <div class="sudoku-cell" id="r1-cell-6"></div>
-            <div class="sudoku-cell" id="r1-cell-7"></div>
-            <div class="sudoku-cell" id="r1-cell-8"></div>
+            <div class="sudoku-cell" id="cell-30">
+                <span id="cell-30-value"/>
+                <div class="sudoku-cell-notes" id="cell-30-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-30-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-30-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-30-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-30-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-30-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-30-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-30-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-30-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-30-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-40">
+                <span id="cell-40-value"/>
+                <div class="sudoku-cell-notes" id="cell-40-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-40-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-40-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-40-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-40-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-40-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-40-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-40-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-40-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-40-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-50">
+                <span id="cell-50-value"/>
+                <div class="sudoku-cell-notes" id="cell-50-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-50-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-50-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-50-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-50-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-50-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-50-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-50-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-50-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-50-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-31">
+                <span id="cell-31-value"/>
+                <div class="sudoku-cell-notes" id="cell-31-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-31-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-31-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-31-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-31-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-31-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-31-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-31-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-31-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-31-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-41">
+                <span id="cell-41-value"/>
+                <div class="sudoku-cell-notes" id="cell-41-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-41-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-41-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-41-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-41-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-41-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-41-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-41-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-41-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-41-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-51">
+                <span id="cell-51-value"/>
+                <div class="sudoku-cell-notes" id="cell-51-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-51-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-51-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-51-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-51-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-51-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-51-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-51-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-51-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-51-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-32">
+                <span id="cell-32-value"/>
+                <div class="sudoku-cell-notes" id="cell-32-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-32-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-32-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-32-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-32-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-32-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-32-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-32-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-32-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-32-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-42">
+                <span id="cell-42-value"/>
+                <div class="sudoku-cell-notes" id="cell-42-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-42-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-42-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-42-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-42-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-42-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-42-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-42-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-42-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-42-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-52">
+                <span id="cell-52-value"/>
+                <div class="sudoku-cell-notes" id="cell-52-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-52-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-52-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-52-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-52-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-52-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-52-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-52-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-52-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-52-note-9">9</div>
+                </div>
+            </div>
         </div>
         <div class="sudoku-region" id="region-2">
-            <div class="sudoku-cell" id="r2-cell-0"></div>
-            <div class="sudoku-cell" id="r2-cell-1"></div>
-            <div class="sudoku-cell" id="r2-cell-2"></div>
-            <div class="sudoku-cell" id="r2-cell-3"></div>
-            <div class="sudoku-cell" id="r2-cell-4"></div>
-            <div class="sudoku-cell" id="r2-cell-5"></div>
-            <div class="sudoku-cell" id="r2-cell-6"></div>
-            <div class="sudoku-cell" id="r2-cell-7"></div>
-            <div class="sudoku-cell" id="r2-cell-8"></div>
+            <div class="sudoku-cell" id="cell-60">
+                <span id="cell-60-value"/>
+                <div class="sudoku-cell-notes" id="cell-60-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-60-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-60-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-60-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-60-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-60-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-60-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-60-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-60-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-60-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-70">
+                <span id="cell-70-value"/>
+                <div class="sudoku-cell-notes" id="cell-70-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-70-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-70-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-70-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-70-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-70-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-70-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-70-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-70-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-70-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-80">
+                <span id="cell-80-value"/>
+                <div class="sudoku-cell-notes" id="cell-80-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-80-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-80-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-80-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-80-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-80-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-80-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-80-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-80-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-80-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-61">
+                <span id="cell-61-value"/>
+                <div class="sudoku-cell-notes" id="cell-61-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-61-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-61-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-61-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-61-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-61-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-61-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-61-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-61-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-61-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-71">
+                <span id="cell-71-value"/>
+                <div class="sudoku-cell-notes" id="cell-71-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-71-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-71-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-71-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-71-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-71-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-71-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-71-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-71-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-71-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-81">
+                <span id="cell-81-value"/>
+                <div class="sudoku-cell-notes" id="cell-81-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-81-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-81-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-81-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-81-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-81-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-81-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-81-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-81-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-81-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-62">
+                <span id="cell-62-value"/>
+                <div class="sudoku-cell-notes" id="cell-62-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-62-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-62-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-62-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-62-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-62-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-62-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-62-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-62-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-62-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-72">
+                <span id="cell-72-value"/>
+                <div class="sudoku-cell-notes" id="cell-72-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-72-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-72-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-72-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-72-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-72-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-72-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-72-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-72-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-72-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-82">
+                <span id="cell-82-value"/>
+                <div class="sudoku-cell-notes" id="cell-82-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-82-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-82-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-82-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-82-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-82-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-82-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-82-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-82-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-82-note-9">9</div>
+                </div>
+            </div>
         </div>
         <div class="sudoku-region" id="region-3">
-            <div class="sudoku-cell" id="r3-cell-0"></div>
-            <div class="sudoku-cell" id="r3-cell-1"></div>
-            <div class="sudoku-cell" id="r3-cell-2"></div>
-            <div class="sudoku-cell" id="r3-cell-3"></div>
-            <div class="sudoku-cell" id="r3-cell-4"></div>
-            <div class="sudoku-cell" id="r3-cell-5"></div>
-            <div class="sudoku-cell" id="r3-cell-6"></div>
-            <div class="sudoku-cell" id="r3-cell-7"></div>
-            <div class="sudoku-cell" id="r3-cell-8"></div>
+            <div class="sudoku-cell" id="cell-03">
+                <span id="cell-03-value"/>
+                <div class="sudoku-cell-notes" id="cell-03-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-03-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-03-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-03-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-03-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-03-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-03-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-03-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-03-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-03-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-13">
+                <span id="cell-13-value"/>
+                <div class="sudoku-cell-notes" id="cell-13-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-13-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-13-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-13-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-13-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-13-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-13-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-13-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-13-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-13-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-23">
+                <span id="cell-23-value"/>
+                <div class="sudoku-cell-notes" id="cell-23-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-23-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-23-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-23-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-23-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-23-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-23-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-23-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-23-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-23-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-04">
+                <span id="cell-04-value"/>
+                <div class="sudoku-cell-notes" id="cell-04-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-04-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-04-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-04-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-04-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-04-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-04-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-04-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-04-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-04-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-14">
+                <span id="cell-14-value"/>
+                <div class="sudoku-cell-notes" id="cell-14-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-14-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-14-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-14-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-14-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-14-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-14-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-14-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-14-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-14-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-24">
+                <span id="cell-24-value"/>
+                <div class="sudoku-cell-notes" id="cell-24-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-24-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-24-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-24-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-24-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-24-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-24-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-24-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-24-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-24-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-05">
+                <span id="cell-05-value"/>
+                <div class="sudoku-cell-notes" id="cell-05-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-05-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-05-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-05-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-05-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-05-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-05-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-05-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-05-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-05-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-15">
+                <span id="cell-15-value"/>
+                <div class="sudoku-cell-notes" id="cell-15-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-15-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-15-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-15-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-15-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-15-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-15-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-15-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-15-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-15-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-25">
+                <span id="cell-25-value"/>
+                <div class="sudoku-cell-notes" id="cell-25-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-25-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-25-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-25-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-25-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-25-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-25-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-25-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-25-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-25-note-9">9</div>
+                </div>
+            </div>
         </div>
         <div class="sudoku-region" id="region-4">
-            <div class="sudoku-cell" id="r4-cell-0"></div>
-            <div class="sudoku-cell" id="r4-cell-1"></div>
-            <div class="sudoku-cell" id="r4-cell-2"></div>
-            <div class="sudoku-cell" id="r4-cell-3"></div>
-            <div class="sudoku-cell" id="r4-cell-4"></div>
-            <div class="sudoku-cell" id="r4-cell-5"></div>
-            <div class="sudoku-cell" id="r4-cell-6"></div>
-            <div class="sudoku-cell" id="r4-cell-7"></div>
-            <div class="sudoku-cell" id="r4-cell-8"></div>
+            <div class="sudoku-cell" id="cell-33">
+                <span id="cell-33-value"/>
+                <div class="sudoku-cell-notes" id="cell-33-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-33-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-33-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-33-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-33-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-33-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-33-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-33-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-33-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-33-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-43">
+                <span id="cell-43-value"/>
+                <div class="sudoku-cell-notes" id="cell-43-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-43-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-43-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-43-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-43-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-43-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-43-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-43-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-43-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-43-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-53">
+                <span id="cell-53-value"/>
+                <div class="sudoku-cell-notes" id="cell-53-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-53-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-53-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-53-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-53-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-53-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-53-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-53-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-53-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-53-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-34">
+                <span id="cell-34-value"/>
+                <div class="sudoku-cell-notes" id="cell-34-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-34-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-34-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-34-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-34-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-34-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-34-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-34-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-34-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-34-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-44">
+                <span id="cell-44-value"/>
+                <div class="sudoku-cell-notes" id="cell-44-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-44-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-44-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-44-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-44-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-44-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-44-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-44-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-44-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-44-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-54">
+                <span id="cell-54-value"/>
+                <div class="sudoku-cell-notes" id="cell-54-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-54-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-54-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-54-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-54-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-54-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-54-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-54-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-54-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-54-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-35">
+                <span id="cell-35-value"/>
+                <div class="sudoku-cell-notes" id="cell-35-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-35-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-35-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-35-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-35-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-35-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-35-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-35-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-35-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-35-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-45">
+                <span id="cell-45-value"/>
+                <div class="sudoku-cell-notes" id="cell-45-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-45-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-45-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-45-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-45-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-45-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-45-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-45-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-45-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-45-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-55">
+                <span id="cell-55-value"/>
+                <div class="sudoku-cell-notes" id="cell-55-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-55-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-55-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-55-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-55-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-55-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-55-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-55-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-55-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-55-note-9">9</div>
+                </div>
+            </div>
         </div>
         <div class="sudoku-region" id="region-5">
-            <div class="sudoku-cell" id="r5-cell-0"></div>
-            <div class="sudoku-cell" id="r5-cell-1"></div>
-            <div class="sudoku-cell" id="r5-cell-2"></div>
-            <div class="sudoku-cell" id="r5-cell-3"></div>
-            <div class="sudoku-cell" id="r5-cell-4"></div>
-            <div class="sudoku-cell" id="r5-cell-5"></div>
-            <div class="sudoku-cell" id="r5-cell-6"></div>
-            <div class="sudoku-cell" id="r5-cell-7"></div>
-            <div class="sudoku-cell" id="r5-cell-8"></div>
+            <div class="sudoku-cell" id="cell-63">
+                <span id="cell-63-value"/>
+                <div class="sudoku-cell-notes" id="cell-63-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-63-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-63-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-63-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-63-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-63-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-63-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-63-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-63-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-63-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-73">
+                <span id="cell-73-value"/>
+                <div class="sudoku-cell-notes" id="cell-73-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-73-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-73-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-73-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-73-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-73-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-73-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-73-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-73-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-73-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-83">
+                <span id="cell-83-value"/>
+                <div class="sudoku-cell-notes" id="cell-83-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-83-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-83-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-83-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-83-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-83-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-83-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-83-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-83-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-83-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-64">
+                <span id="cell-64-value"/>
+                <div class="sudoku-cell-notes" id="cell-64-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-64-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-64-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-64-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-64-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-64-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-64-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-64-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-64-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-64-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-74">
+                <span id="cell-74-value"/>
+                <div class="sudoku-cell-notes" id="cell-74-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-74-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-74-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-74-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-74-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-74-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-74-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-74-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-74-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-74-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-84">
+                <span id="cell-84-value"/>
+                <div class="sudoku-cell-notes" id="cell-84-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-84-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-84-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-84-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-84-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-84-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-84-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-84-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-84-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-84-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-65">
+                <span id="cell-65-value"/>
+                <div class="sudoku-cell-notes" id="cell-65-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-65-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-65-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-65-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-65-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-65-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-65-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-65-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-65-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-65-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-75">
+                <span id="cell-75-value"/>
+                <div class="sudoku-cell-notes" id="cell-75-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-75-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-75-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-75-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-75-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-75-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-75-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-75-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-75-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-75-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-85">
+                <span id="cell-85-value"/>
+                <div class="sudoku-cell-notes" id="cell-85-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-85-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-85-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-85-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-85-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-85-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-85-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-85-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-85-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-85-note-9">9</div>
+                </div>
+            </div>
         </div>
         <div class="sudoku-region" id="region-6">
-            <div class="sudoku-cell" id="r6-cell-0"></div>
-            <div class="sudoku-cell" id="r6-cell-1"></div>
-            <div class="sudoku-cell" id="r6-cell-2"></div>
-            <div class="sudoku-cell" id="r6-cell-3"></div>
-            <div class="sudoku-cell" id="r6-cell-4"></div>
-            <div class="sudoku-cell" id="r6-cell-5"></div>
-            <div class="sudoku-cell" id="r6-cell-6"></div>
-            <div class="sudoku-cell" id="r6-cell-7"></div>
-            <div class="sudoku-cell" id="r6-cell-8"></div>
+            <div class="sudoku-cell" id="cell-06">
+                <span id="cell-06-value"/>
+                <div class="sudoku-cell-notes" id="cell-06-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-06-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-06-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-06-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-06-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-06-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-06-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-06-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-06-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-06-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-16">
+                <span id="cell-16-value"/>
+                <div class="sudoku-cell-notes" id="cell-16-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-16-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-16-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-16-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-16-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-16-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-16-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-16-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-16-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-16-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-26">
+                <span id="cell-26-value"/>
+                <div class="sudoku-cell-notes" id="cell-26-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-26-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-26-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-26-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-26-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-26-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-26-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-26-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-26-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-26-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-07">
+                <span id="cell-07-value"/>
+                <div class="sudoku-cell-notes" id="cell-07-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-07-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-07-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-07-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-07-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-07-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-07-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-07-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-07-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-07-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-17">
+                <span id="cell-17-value"/>
+                <div class="sudoku-cell-notes" id="cell-17-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-17-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-17-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-17-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-17-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-17-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-17-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-17-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-17-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-17-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-27">
+                <span id="cell-27-value"/>
+                <div class="sudoku-cell-notes" id="cell-27-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-27-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-27-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-27-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-27-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-27-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-27-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-27-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-27-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-27-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-08">
+                <span id="cell-08-value"/>
+                <div class="sudoku-cell-notes" id="cell-08-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-08-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-08-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-08-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-08-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-08-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-08-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-08-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-08-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-08-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-18">
+                <span id="cell-18-value"/>
+                <div class="sudoku-cell-notes" id="cell-18-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-18-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-18-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-18-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-18-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-18-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-18-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-18-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-18-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-18-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-28">
+                <span id="cell-28-value"/>
+                <div class="sudoku-cell-notes" id="cell-28-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-28-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-28-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-28-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-28-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-28-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-28-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-28-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-28-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-28-note-9">9</div>
+                </div>
+            </div>
         </div>
         <div class="sudoku-region" id="region-7">
-            <div class="sudoku-cell" id="r7-cell-0"></div>
-            <div class="sudoku-cell" id="r7-cell-1"></div>
-            <div class="sudoku-cell" id="r7-cell-2"></div>
-            <div class="sudoku-cell" id="r7-cell-3"></div>
-            <div class="sudoku-cell" id="r7-cell-4"></div>
-            <div class="sudoku-cell" id="r7-cell-5"></div>
-            <div class="sudoku-cell" id="r7-cell-6"></div>
-            <div class="sudoku-cell" id="r7-cell-7"></div>
-            <div class="sudoku-cell" id="r7-cell-8"></div>
+            <div class="sudoku-cell" id="cell-36">
+                <span id="cell-36-value"/>
+                <div class="sudoku-cell-notes" id="cell-36-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-36-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-36-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-36-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-36-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-36-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-36-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-36-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-36-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-36-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-46">
+                <span id="cell-46-value"/>
+                <div class="sudoku-cell-notes" id="cell-46-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-46-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-46-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-46-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-46-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-46-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-46-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-46-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-46-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-46-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-56">
+                <span id="cell-56-value"/>
+                <div class="sudoku-cell-notes" id="cell-56-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-56-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-56-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-56-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-56-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-56-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-56-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-56-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-56-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-56-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-37">
+                <span id="cell-37-value"/>
+                <div class="sudoku-cell-notes" id="cell-37-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-37-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-37-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-37-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-37-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-37-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-37-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-37-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-37-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-37-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-47">
+                <span id="cell-47-value"/>
+                <div class="sudoku-cell-notes" id="cell-47-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-47-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-47-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-47-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-47-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-47-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-47-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-47-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-47-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-47-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-57">
+                <span id="cell-57-value"/>
+                <div class="sudoku-cell-notes" id="cell-57-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-57-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-57-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-57-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-57-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-57-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-57-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-57-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-57-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-57-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-38">
+                <span id="cell-38-value"/>
+                <div class="sudoku-cell-notes" id="cell-38-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-38-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-38-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-38-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-38-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-38-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-38-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-38-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-38-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-38-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-48">
+                <span id="cell-48-value"/>
+                <div class="sudoku-cell-notes" id="cell-48-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-48-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-48-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-48-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-48-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-48-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-48-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-48-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-48-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-48-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-58">
+                <span id="cell-58-value"/>
+                <div class="sudoku-cell-notes" id="cell-58-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-58-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-58-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-58-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-58-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-58-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-58-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-58-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-58-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-58-note-9">9</div>
+                </div>
+            </div>
         </div>
         <div class="sudoku-region" id="region-8">
-            <div class="sudoku-cell" id="r8-cell-0"></div>
-            <div class="sudoku-cell" id="r8-cell-1"></div>
-            <div class="sudoku-cell" id="r8-cell-2"></div>
-            <div class="sudoku-cell" id="r8-cell-3"></div>
-            <div class="sudoku-cell" id="r8-cell-4"></div>
-            <div class="sudoku-cell" id="r8-cell-5"></div>
-            <div class="sudoku-cell" id="r8-cell-6"></div>
-            <div class="sudoku-cell" id="r8-cell-7"></div>
-            <div class="sudoku-cell" id="r8-cell-8"></div>
+            <div class="sudoku-cell" id="cell-66">
+                <span id="cell-66-value"/>
+                <div class="sudoku-cell-notes" id="cell-66-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-66-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-66-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-66-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-66-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-66-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-66-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-66-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-66-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-66-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-76">
+                <span id="cell-76-value"/>
+                <div class="sudoku-cell-notes" id="cell-76-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-76-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-76-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-76-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-76-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-76-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-76-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-76-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-76-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-76-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-86">
+                <span id="cell-86-value"/>
+                <div class="sudoku-cell-notes" id="cell-86-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-86-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-86-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-86-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-86-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-86-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-86-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-86-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-86-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-86-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-67">
+                <span id="cell-67-value"/>
+                <div class="sudoku-cell-notes" id="cell-67-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-67-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-67-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-67-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-67-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-67-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-67-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-67-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-67-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-67-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-77">
+                <span id="cell-77-value"/>
+                <div class="sudoku-cell-notes" id="cell-77-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-77-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-77-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-77-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-77-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-77-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-77-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-77-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-77-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-77-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-87">
+                <span id="cell-87-value"/>
+                <div class="sudoku-cell-notes" id="cell-87-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-87-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-87-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-87-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-87-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-87-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-87-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-87-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-87-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-87-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-68">
+                <span id="cell-68-value"/>
+                <div class="sudoku-cell-notes" id="cell-68-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-68-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-68-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-68-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-68-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-68-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-68-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-68-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-68-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-68-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-78">
+                <span id="cell-78-value"/>
+                <div class="sudoku-cell-notes" id="cell-78-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-78-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-78-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-78-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-78-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-78-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-78-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-78-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-78-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-78-note-9">9</div>
+                </div>
+            </div>
+            <div class="sudoku-cell" id="cell-88">
+                <span id="cell-88-value"/>
+                <div class="sudoku-cell-notes" id="cell-88-notes">
+                    <div class="sudoku-cell-notes-item hidden" id="cell-88-note-1">1</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-88-note-2">2</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-88-note-3">3</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-88-note-4">4</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-88-note-5">5</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-88-note-6">6</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-88-note-7">7</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-88-note-8">8</div>
+                    <div class="sudoku-cell-notes-item hidden" id="cell-88-note-9">9</div>
+                </div>
+            </div>
         </div>
     </div>
     <script type="module" src="js/sudoku.js"></script>
 </main>
 
 <footer>
-    <p>Kyle Brown | 2024 - <span id="cw-year">00/0000</span> | System time: <span id="system-time">00:00:00 AM</span></p>
+    <p>Kyle Brown | 2024 - <span id="cw-year">00/000/0</span> | System time: <span id="system-time">00:00:00 A/M</span>
+    </p>
     <script src="js/time.js"></script>
 </footer>
 

@@ -13,7 +13,7 @@
 
     /*Font setup*/
     font-size: 6vh;
-    font-family: var(--font-family);
+    font-family: var(--font-family), sans-serif;
 
     &:hover {
         background-color: var(--color-secondary-lighter);
@@ -42,7 +42,7 @@
 .sudoku-cell-notes-item {
     font-size: 2vh;
     color: var(--color-quaternary);
-    font-family: var(--font-family);
+    font-family: var(--font-family), sans-serif;
 
     &.hidden {
         opacity: 0;

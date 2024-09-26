@@ -50,10 +50,10 @@ func VerifyColumn(board *SudokuBoard, col int) bool {
 		val := board.GetAt(col, y)
 		if val == 0 {
 			continue
-		} else if seen[val-1] { // - 1 because we will see 1 thru 9 but the array is zero indexed
+		} else if seen[val-1] { // - 1 because we will see 1 through 9 but the array is zero indexed
 			return false
 		} else {
-			seen[val-1] = true // - 1 because we will see 1 thru 9 but the array is zero indexed
+			seen[val-1] = true // - 1 because we will see 1 through 9 but the array is zero indexed
 		}
 	}
 	return true
@@ -72,10 +72,10 @@ func VerifyRow(board *SudokuBoard, row int) bool {
 		val := board.GetAt(x, row)
 		if val == 0 {
 			continue
-		} else if seen[val-1] { // - 1 because we will see 1 thru 9 but the array is zero indexed
+		} else if seen[val-1] { // - 1 because we will see 1 through 9 but the array is zero indexed
 			return false
 		} else {
-			seen[val-1] = true // - 1 because we will see 1 thru 9 but the array is zero indexed
+			seen[val-1] = true // - 1 because we will see 1 through 9 but the array is zero indexed
 		}
 	}
 	return true
@@ -100,27 +100,27 @@ range [1,9], and true otherwise.
 */
 func VerifyRegion(board *SudokuBoard, region int) bool {
 	seen := [9]bool{}
-	regionCoord := sudokuRegionMap[region]
-	for x := regionCoord.xstart; x <= regionCoord.xend; x++ {
-		for y := regionCoord.ystart; y <= regionCoord.yend; y++ {
+	regionCord := sudokuRegionMap[region]
+	for x := regionCord.xStart; x <= regionCord.xEnd; x++ {
+		for y := regionCord.yStart; y <= regionCord.yEnd; y++ {
 			val := board.GetAt(x, y)
 			if val == 0 {
 				continue
-			} else if seen[val-1] { // - 1 because we will see 1 thru 9 but the array is zero indexed
+			} else if seen[val-1] { // - 1 because we will see 1 through 9 but the array is zero indexed
 				return false
 			} else {
-				seen[val-1] = true // - 1 because we will see 1 thru 9 but the array is zero indexed
+				seen[val-1] = true // - 1 because we will see 1 through 9 but the array is zero indexed
 			}
 		}
 	}
 	return true
 }
 
-type sudokuRegionCoord struct {
-	xstart, ystart, xend, yend int
+type sudokuRegionCord struct {
+	xStart, yStart, xEnd, yEnd int
 }
 
-var sudokuRegionMap = map[int]sudokuRegionCoord{
+var sudokuRegionMap = map[int]sudokuRegionCord{
 	0: {0, 0, 2, 2},
 	1: {3, 0, 5, 2},
 	2: {6, 0, 8, 2},

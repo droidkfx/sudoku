@@ -1,6 +1,6 @@
 # Sudoku
 
-Sudoku is a number game in which the objective is to take a 9x9 grid and fill it with numbers 1-9 such that each row, column, and 9 3x3 subgrid contain all of the numbers 1-9 exactly once.
+Sudoku is a number game in which the objective is to take a 9x9 grid and fill it with numbers 1-9 such that each row, column, and 9 3x3 subgrid contain all the numbers 1-9 exactly once.
 
 The goals of this project are to:
 * Implement a sudoku solver that can solve any valid sudoku puzzle

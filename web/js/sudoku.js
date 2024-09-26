@@ -37,10 +37,10 @@ function UnsetOption(x, y, option) {
 }
 
 async function FillBoard(number) {
-    let bdata = await sudokuClient.GetBoard(number);
+    let bData = await sudokuClient.GetBoard(number);
     for (let x = 0; x < 9; x++) {
         for (let y = 0; y < 9; y++) {
-            let cell = bdata.board[y][x];
+            let cell = bData.board[y][x];
             SetCell(x, y, cell, true);
         }
     }

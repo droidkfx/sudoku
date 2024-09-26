@@ -16,8 +16,8 @@ import (
 
 func TestStrategies(t *testing.T) {
 	type args struct {
-		b     *board.SudokuBoard
-		strat StrategyMethod
+		b *board.SudokuBoard
+		s StrategyMethod
 	}
 	tests := []struct {
 		name string
@@ -27,8 +27,8 @@ func TestStrategies(t *testing.T) {
 		{
 			name: "Psychic empty",
 			args: args{
-				b:     &board.SudokuBoard{},
-				strat: PsychicStrategy,
+				b: &board.SudokuBoard{},
+				s: PsychicStrategy,
 			},
 			want: []*StrategyStep{
 				{
@@ -59,7 +59,7 @@ func TestStrategies(t *testing.T) {
 					{0, 0, 0, 0, 0, 0, 0, 0, 0},
 					{0, 0, 0, 0, 0, 0, 0, 0, 0},
 				}),
-				strat: PsychicStrategy,
+				s: PsychicStrategy,
 			},
 			want: []*StrategyStep{
 				{
@@ -90,7 +90,7 @@ func TestStrategies(t *testing.T) {
 					{6, 4, 1, 9, 7, 0, 2, 5, 3},
 					{9, 7, 8, 2, 5, 3, 6, 4, 0},
 				}),
-				strat: PsychicStrategy,
+				s: PsychicStrategy,
 			},
 			want: []*StrategyStep{
 				{
@@ -130,7 +130,7 @@ func TestStrategies(t *testing.T) {
 					{6, 4, 1, 9, 7, 0, 2, 5, 3},
 					{9, 7, 8, 2, 5, 3, 6, 4, 0},
 				}),
-				strat: LastCandidateStrategy,
+				s: LastCandidateStrategy,
 			},
 			want: []*StrategyStep{
 				{
@@ -170,7 +170,7 @@ func TestStrategies(t *testing.T) {
 					{0, 0, 0, 9, 7, 0, 0, 0, 0},
 					{0, 0, 0, 2, 5, 3, 0, 0, 0},
 				}),
-				strat: LastCandidateStrategy,
+				s: LastCandidateStrategy,
 			},
 			want: []*StrategyStep{
 				{
@@ -198,7 +198,7 @@ func TestStrategies(t *testing.T) {
 					{6, 4, 1, 9, 7, 0, 2, 5, 3},
 					{9, 7, 8, 2, 5, 3, 6, 4, 0},
 				}),
-				strat: LastInColumnStrategy,
+				s: LastInColumnStrategy,
 			},
 			want: []*StrategyStep{
 				{
@@ -239,7 +239,7 @@ func TestStrategies(t *testing.T) {
 					{0, 0, 0, 9, 7, 0, 0, 0, 0},
 					{0, 0, 0, 2, 5, 3, 0, 0, 0},
 				}),
-				strat: LastInColumnStrategy,
+				s: LastInColumnStrategy,
 			},
 			want: []*StrategyStep{
 				{
@@ -267,7 +267,7 @@ func TestStrategies(t *testing.T) {
 					{6, 4, 1, 9, 7, 0, 2, 5, 3},
 					{9, 7, 8, 2, 5, 3, 6, 4, 0},
 				}),
-				strat: LastInRowStrategy,
+				s: LastInRowStrategy,
 			},
 			want: []*StrategyStep{
 				{
@@ -307,7 +307,7 @@ func TestStrategies(t *testing.T) {
 					{0, 0, 0, 0, 0, 0, 0, 0, 0},
 					{0, 0, 0, 0, 0, 0, 0, 0, 0},
 				}),
-				strat: LastInRowStrategy,
+				s: LastInRowStrategy,
 			},
 			want: []*StrategyStep{
 				{
@@ -335,7 +335,7 @@ func TestStrategies(t *testing.T) {
 					{6, 4, 1, 9, 7, 0, 2, 5, 3},
 					{9, 7, 8, 2, 5, 3, 6, 4, 0},
 				}),
-				strat: LastInRegionStrategy,
+				s: LastInRegionStrategy,
 			},
 			want: []*StrategyStep{
 				{
@@ -375,7 +375,7 @@ func TestStrategies(t *testing.T) {
 					{0, 0, 0, 9, 7, 0, 0, 0, 0},
 					{0, 0, 0, 2, 5, 3, 0, 0, 0},
 				}),
-				strat: LastInRegionStrategy,
+				s: LastInRegionStrategy,
 			},
 			want: []*StrategyStep{
 				{
@@ -394,7 +394,7 @@ func TestStrategies(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			opts := GetPossibleValues(tt.args.b)
 			for _, step := range tt.want {
-				if got := tt.args.strat(tt.args.b, &opts); !reflect.DeepEqual(got, step) {
+				if got := tt.args.s(tt.args.b, &opts); !reflect.DeepEqual(got, step) {
 					t.Errorf("got %v, want %v", got, step)
 				}
 				if step != nil {

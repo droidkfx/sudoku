@@ -147,7 +147,7 @@ func (s *sudokuBoardFileRepo) dataToBoard(data []byte) *board.SudokuBoard {
 			index := i + (j * 9)
 			// even index -> high byte
 			if index%2 == 0 {
-				b.SetAt(i, j, int((data[index/2] & lowMask)))
+				b.SetAt(i, j, int(data[index/2]&lowMask))
 			} else {
 				b.SetAt(i, j, int(data[index/2]&highMask>>4))
 			}

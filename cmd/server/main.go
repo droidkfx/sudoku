@@ -5,12 +5,16 @@ import (
 	"net/http"
 
 	"droidkfx.com/sudoku/cmd/server/controller"
+	"droidkfx.com/sudoku/pkg/repository"
 )
 
 func main() {
+	r, sd := repository.NewSudokuBoardRepo("./data")
+	defer sd()
+
 	mux := http.NewServeMux()
 	controller.RegisterHealthHandlers(mux)
-	controller.RegisterBoardHandlers(mux)
+	controller.RegisterBoardHandlers(mux, r)
 	mux.Handle("/", http.FileServer(http.Dir("./web")))
 
 	fmt.Println("Starting server, access at http://localhost:8080")

@@ -5,7 +5,7 @@ import (
 )
 
 func RegisterHealthHandlers(mux *http.ServeMux) {
-	mux.HandleFunc("/health", health)
+	mux.HandleFunc("GET /health", health)
 }
 
 func health(writer http.ResponseWriter, _ *http.Request) {

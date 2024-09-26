@@ -12,8 +12,6 @@ function SetCell(x, y, value, locked) {
     let noteBlock = document.getElementById("cell-" + x + "" + y + "-notes");
 
     if (!cellValue) {
-        console.error("Cell not found: " + x + "" + y);
-        console.error(cell - +x + "" + y + "-value");
         return;
     }
     cellValue.innerText = value;
@@ -89,7 +87,6 @@ function HandleKeyDown(event) {
         return;
     }
     let cellCord = getCellCord(selectedCell);
-    console.debug(event.key);
     if (event.key >=1 && event.key <= 9) {
         if (notesEnabled) {
             ToggleOption(cellCord[0], cellCord[1], event.key);

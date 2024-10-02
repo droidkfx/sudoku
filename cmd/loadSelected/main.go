@@ -13,7 +13,7 @@ func main() {
 	r, sd := repository.NewSudokuBoardRepo("./data")
 	defer sd()
 
-	b := r.GetNumber(50)
+	_, b := r.GetByNumber(50)
 	fmt.Println(b)
 	solution := solver.SolveByStrategies(b)
 	for _, step := range solution {

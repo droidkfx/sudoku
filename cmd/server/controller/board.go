@@ -19,8 +19,9 @@ func RegisterBoardHandlers(mux *http.ServeMux, r repository.SudokuBoardRepo) {
 }
 
 type GetBoardByIdResponse struct {
-	Id    int       `json:"id"`
-	Board [9][9]int `json:"board"`
+	Id         int       `json:"id"`
+	Difficulty string    `json:"difficulty"`
+	Board      [9][9]int `json:"board"`
 }
 
 func (b *boardController) GetBoardById(writer http.ResponseWriter, request *http.Request) {
@@ -32,13 +33,23 @@ func (b *boardController) GetBoardById(writer http.ResponseWriter, request *http
 
 	writer.Header().Set("Content-Type", "application/json")
 	writer.WriteHeader(http.StatusOK)
-	_ = json.NewEncoder(writer).Encode(GetBoardByIdResponse{Id: id, Board: b.SudokuBoardToResponseBoard(b.r.GetByNumber(id))})
+	idGot, nBoard := b.r.GetByNumber(id)
+	_ = json.NewEncoder(writer).Encode(GetBoardByIdResponse{
+		Id:         idGot,
+		Difficulty: "TBD",
+		Board:      b.SudokuBoardToResponseBoard(nBoard),
+	})
 }
 
-func (b *boardController) GetRandomBoard(writer http.ResponseWriter, request *http.Request) {
+func (b *boardController) GetRandomBoard(writer http.ResponseWriter, _ *http.Request) {
 	writer.Header().Set("Content-Type", "application/json")
 	writer.WriteHeader(http.StatusOK)
-	_ = json.NewEncoder(writer).Encode(GetBoardByIdResponse{Id: -1, Board: b.SudokuBoardToResponseBoard(b.r.GetRandom())})
+	idGot, rBoard := b.r.GetRandom()
+	_ = json.NewEncoder(writer).Encode(GetBoardByIdResponse{
+		Id:         idGot,
+		Difficulty: "TBD",
+		Board:      b.SudokuBoardToResponseBoard(rBoard),
+	})
 }
 
 func (b *boardController) SudokuBoardToResponseBoard(brd *board.SudokuBoard) [9][9]int {

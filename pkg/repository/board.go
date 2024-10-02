@@ -15,8 +15,8 @@ const lowMask uint8 = 0b0000_1111
 const highMask uint8 = 0b1111_0000
 
 type SudokuBoardRepo interface {
-	GetRandom() *board.SudokuBoard
-	GetByNumber(n int) *board.SudokuBoard
+	GetRandom() (int, *board.SudokuBoard)
+	GetByNumber(n int) (int, *board.SudokuBoard)
 	SaveNew(sudokuBoard *board.SudokuBoard)
 	SaveAll(sudokuBoards []*board.SudokuBoard)
 }
@@ -47,7 +47,7 @@ func (s *sudokuBoardFileRepo) shutdown() {
 	_ = s.home.Close()
 }
 
-func (s *sudokuBoardFileRepo) GetRandom() *board.SudokuBoard {
+func (s *sudokuBoardFileRepo) GetRandom() (int, *board.SudokuBoard) {
 	dataLength := int64(binary.Size(byte(0)) * 81)
 	fStat, err := s.home.Stat()
 	if err != nil {
@@ -56,14 +56,16 @@ func (s *sudokuBoardFileRepo) GetRandom() *board.SudokuBoard {
 
 	fSize := fStat.Size()
 	if fSize < dataLength {
-		return board.FromNumbers([9][9]int{})
+		return 0, board.FromNumbers([9][9]int{})
 	}
 
-	return s.dataToBoard(s.loadBoard(rand.Intn(int(fSize / dataLength))))
+	loadedBoard, id := s.loadBoard(rand.Intn(int(fSize / dataLength)))
+	return id, s.dataToBoard(loadedBoard)
 }
 
-func (s *sudokuBoardFileRepo) GetByNumber(n int) *board.SudokuBoard {
-	return s.dataToBoard(s.loadBoard(n))
+func (s *sudokuBoardFileRepo) GetByNumber(n int) (int, *board.SudokuBoard) {
+	loadedBoard, id := s.loadBoard(n)
+	return id, s.dataToBoard(loadedBoard)
 }
 
 func (s *sudokuBoardFileRepo) SaveNew(sudokuBoard *board.SudokuBoard) {
@@ -78,7 +80,7 @@ func (s *sudokuBoardFileRepo) SaveAll(sudokuBoards []*board.SudokuBoard) {
 	s.saveToEnd(data)
 }
 
-func (s *sudokuBoardFileRepo) loadBoard(n int) []byte {
+func (s *sudokuBoardFileRepo) loadBoard(n int) ([]byte, int) {
 	data := make([]byte, 41)
 	dataSize := int64(41)
 	offset := dataSize * int64(n)
@@ -89,14 +91,14 @@ func (s *sudokuBoardFileRepo) loadBoard(n int) []byte {
 	}
 
 	if fStat.Size() <= offset {
-		return data // there is no such index
+		return data, 0 // there is no such index
 	}
 	_, err = s.home.ReadAt(data, offset)
 	if err != nil {
 		panic(err)
 	}
 
-	return data
+	return data, n
 }
 
 func (s *sudokuBoardFileRepo) saveToEnd(data []byte) {

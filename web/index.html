@@ -10,6 +10,19 @@
 
 <header>
     <h1>Sudoku</h1>
+    <div class="sudoku-game-status">
+        <p>
+            <label for="sudoku-board-number">Board Number: </label>
+            <input type="number" min="0" max="999999999" id="sudoku-board-number" value="0">
+            <button id="sudoku-new-board-number-button" disabled>Go</button>
+        </p>
+        <p>Difficulty: <span id="sudoku-board-difficulty">???</span></p>
+        <p>Time: <span id="sudoku-board-time">0:00</span></p>
+        <p>
+            <label for="sudoku-board-notes">Notes: </label>
+            <input type="checkbox" id="sudoku-board-notes"/>
+        </p>
+    </div>
 </header>
 
 <main>

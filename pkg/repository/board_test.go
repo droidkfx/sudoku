@@ -133,7 +133,7 @@ func Test_sudokuBoardFileRepo_GetRandomBoard(t *testing.T) {
 			_ = file.Close()
 
 			s, sd := NewSudokuBoardRepoUsingFs(fs)
-			_ = s.GetRandom()
+			_, _ = s.GetRandom()
 			sd()
 		})
 	}
@@ -317,7 +317,7 @@ func Test_sudokuBoardFileRepo_GetBoardNumber(t *testing.T) {
 			_ = file.Close()
 
 			s, sd := NewSudokuBoardRepoUsingFs(fs)
-			b := s.GetByNumber(tt.args.boardNumber)
+			_, b := s.GetByNumber(tt.args.boardNumber)
 			sd()
 
 			if !reflect.DeepEqual(b, tt.want.sudokuBoard) {

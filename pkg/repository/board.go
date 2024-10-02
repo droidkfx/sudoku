@@ -9,14 +9,14 @@ import (
 	"github.com/spf13/afero"
 )
 
-const dbFileName = "sudoku.db"
+const dbBoardFile = "boards.bin"
 const boardDataBytes = 41
 const lowMask uint8 = 0b0000_1111
 const highMask uint8 = 0b1111_0000
 
 type SudokuBoardRepo interface {
 	GetRandom() *board.SudokuBoard
-	GetNumber(n int) *board.SudokuBoard
+	GetByNumber(n int) *board.SudokuBoard
 	SaveNew(sudokuBoard *board.SudokuBoard)
 	SaveAll(sudokuBoards []*board.SudokuBoard)
 }
@@ -26,7 +26,7 @@ func NewSudokuBoardRepo(dbLocation string) (SudokuBoardRepo, func()) {
 }
 
 func NewSudokuBoardRepoUsingFs(fileSystem afero.Fs) (SudokuBoardRepo, func()) {
-	dbFile, err := fileSystem.OpenFile(dbFileName, osConst.O_CREATE|osConst.O_RDWR, 0666)
+	dbFile, err := fileSystem.OpenFile(dbBoardFile, osConst.O_CREATE|osConst.O_RDWR, 0666)
 	if err != nil {
 		panic(err)
 	}
@@ -62,7 +62,7 @@ func (s *sudokuBoardFileRepo) GetRandom() *board.SudokuBoard {
 	return s.dataToBoard(s.loadBoard(rand.Intn(int(fSize / dataLength))))
 }
 
-func (s *sudokuBoardFileRepo) GetNumber(n int) *board.SudokuBoard {
+func (s *sudokuBoardFileRepo) GetByNumber(n int) *board.SudokuBoard {
 	return s.dataToBoard(s.loadBoard(n))
 }
 

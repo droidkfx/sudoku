@@ -127,7 +127,7 @@ func Test_sudokuBoardFileRepo_GetRandomBoard(t *testing.T) {
 			}()
 
 			fs := afero.NewMemMapFs()
-			file, _ := fs.Create(dbFileName)
+			file, _ := fs.Create(dbBoardFile)
 			_, _ = file.Write(tt.args.initialFileContent)
 			_ = file.Sync()
 			_ = file.Close()
@@ -311,7 +311,7 @@ func Test_sudokuBoardFileRepo_GetBoardNumber(t *testing.T) {
 			}()
 
 			fs := afero.NewMemMapFs()
-			file, _ := fs.Create(dbFileName)
+			file, _ := fs.Create(dbBoardFile)
 			_, _ = file.Write(tt.args.initialFileContent)
 			_ = file.Sync()
 			_ = file.Close()
@@ -407,7 +407,7 @@ func Test_sudokuBoardFileRepo_SaveNewBoard(t *testing.T) {
 			}()
 
 			fs := afero.NewMemMapFs()
-			file, _ := fs.Create(dbFileName)
+			file, _ := fs.Create(dbBoardFile)
 			_, _ = file.Write(tt.args.initialFileContent)
 			_ = file.Sync()
 			_ = file.Close()
@@ -416,7 +416,7 @@ func Test_sudokuBoardFileRepo_SaveNewBoard(t *testing.T) {
 			s.SaveNew(tt.args.sudokuBoard)
 			sd()
 
-			file, _ = fs.Open(dbFileName)
+			file, _ = fs.Open(dbBoardFile)
 			content, _ := afero.ReadAll(file)
 			if !reflect.DeepEqual(content, tt.want.expectedContent) {
 				t.Errorf("sudokuBoardFileRepo.SaveNew() = \n%v, want \n%v", content, tt.want.expectedContent)

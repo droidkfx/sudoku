@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="builder debug" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+    <deployment type="dockerfile">
+      <settings>
+        <option name="imageTag" value="sudoku-server-builder:experimental" />
+        <option name="attachToContainerNeeded" value="true" />
+        <option name="buildCliOptions" value="--target=builder" />
+        <option name="containerName" value="sudoku-server-builder-test" />
+        <option name="sourceFilePath" value="Dockerfile" />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>

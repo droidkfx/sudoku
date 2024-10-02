@@ -32,7 +32,7 @@ func (b *boardController) GetBoardById(writer http.ResponseWriter, request *http
 
 	writer.Header().Set("Content-Type", "application/json")
 	writer.WriteHeader(http.StatusOK)
-	_ = json.NewEncoder(writer).Encode(GetBoardByIdResponse{Id: id, Board: b.SudokuBoardToResponseBoard(b.r.GetNumber(id))})
+	_ = json.NewEncoder(writer).Encode(GetBoardByIdResponse{Id: id, Board: b.SudokuBoardToResponseBoard(b.r.GetByNumber(id))})
 }
 
 func (b *boardController) GetRandomBoard(writer http.ResponseWriter, request *http.Request) {

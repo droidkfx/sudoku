@@ -317,7 +317,7 @@ func Test_sudokuBoardFileRepo_GetBoardNumber(t *testing.T) {
 			_ = file.Close()
 
 			s, sd := NewSudokuBoardRepoUsingFs(fs)
-			b := s.GetNumber(tt.args.boardNumber)
+			b := s.GetByNumber(tt.args.boardNumber)
 			sd()
 
 			if !reflect.DeepEqual(b, tt.want.sudokuBoard) {
